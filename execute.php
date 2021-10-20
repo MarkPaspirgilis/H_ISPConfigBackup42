@@ -12,7 +12,7 @@ $GLOBALS['pagecontent'] = '404 - File not found';
 #
 $requested = trim(Request::$requested_clean_path);
 if(empty($requested)) {
-    Utilities::redirect(BASEURL . 'index'); 
+    Utilities::redirect(BASEURL . 'index');
 }
 $content_filename = str_replace('/', '_', empty($requested) ? 'index' : $requested);
 $File_content = File::instance_of_first_existing_file(File::_create_try_list($content_filename, array('php', 'html'), 'pages/'));
