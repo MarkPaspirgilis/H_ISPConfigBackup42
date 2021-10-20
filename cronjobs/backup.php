@@ -1,6 +1,5 @@
 <?php
 
-define('CHOWN', 'web2:client1');
 define('CHMOD', '775');
 define('URL_HASH', '?' . time());
 define('DIR_BACKUP', '/backup/');
