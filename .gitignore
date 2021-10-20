@@ -1,1 +1,11 @@
+/nbproject/private
 /nbproject/private/
+/nbproject/private/*
+
+/vendor
+/vendor/
+/vendor/*
+
+/_cache
+/_cache/
+/_cache/*
