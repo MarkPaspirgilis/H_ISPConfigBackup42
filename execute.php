@@ -2,4 +2,4 @@
 
 include 'lib/init.php';
 
-echo 'BACKUPSYSTEM';
+include 'templates/base.php';
