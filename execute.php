@@ -18,6 +18,6 @@ $content_filename = str_replace('/', '_', empty($requested) ? 'index' : $request
 $File_content = File::instance_of_first_existing_file(File::_create_try_list($content_filename, array('php', 'html'), 'pages/'));
 if($File_content->exists) {
     $GLOBALS['pagecontent'] = $File_content->get_content();
-} 
+}
 
 include 'templates/base.php';
