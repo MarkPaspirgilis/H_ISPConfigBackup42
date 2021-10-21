@@ -5,7 +5,8 @@ define('URL_HASH', '?' . time());
 define('DIR_BACKUP', '/backup/');
 define('DB_NOFILES', 'private/backup_nofiles');
 define('DB_DATABASES', 'private/backup_db');
-define('DB_PW', base64_decode(base64_decode('WVRKVGN5UTNRbVE9')));
+define('DB_PW', @trim(file_get_contents('../PW_DB')));
+define('SSH_PW', @trim(file_get_contents('../PW_SSH')));
 define('SERVER_NAME', 'web13');
 
 ####
