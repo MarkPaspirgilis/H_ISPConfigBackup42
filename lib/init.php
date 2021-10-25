@@ -30,9 +30,9 @@ define('FILE_PW_DB', DIR_ROOT . 'PW_DB');
 if(!is_file(FILE_PW_DB)) {
     file_put_contents(FILE_PW_DB, '');
 }
-define('PW_DB', trim(file_get_contents(FILE_PW_DB)));
+define('DB_PW', trim(file_get_contents(FILE_PW_DB)));
 
-define('FILE_ENVIRONMENT', DIR_PROJECT . 'environment');
+define('FILE_ENVIRONMENT', DIR_ROOT . 'environment');
 define('ENV', is_file(FILE_ENVIRONMENT) ? strtolower(trim(file_get_contents(FILE_ENVIRONMENT))) : 'live');
 
 include DIR_LIB . 'ensure_functions.php';
