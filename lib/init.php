@@ -26,7 +26,7 @@ define('HOUR', 3600);
 define('DAY', HOUR * 24);
 define('WEEK', DAY * 7);
 
-define('FILE_PW_DB', DIR_PROJECT . 'PW_DB');
+define('FILE_PW_DB', DIR_ROOT . 'PW_DB');
 if(!is_file(FILE_PW_DB)) {
     file_put_contents(FILE_PW_DB, '');
 }
