@@ -26,6 +26,12 @@ define('HOUR', 3600);
 define('DAY', HOUR * 24);
 define('WEEK', DAY * 7);
 
+define('FILE_PW_DB', DIR_PROJECT . 'PW_DB');
+if(!is_file(FILE_PW_DB)) {
+    file_put_contents(FILE_PW_DB, '');
+}
+define('PW_DB', trim(file_get_contents(FILE_PW_DB)));
+
 define('FILE_ENVIRONMENT', DIR_PROJECT . 'environment');
 define('ENV', is_file(FILE_ENVIRONMENT) ? strtolower(trim(file_get_contents(FILE_ENVIRONMENT))) : 'live');
 
@@ -40,4 +46,7 @@ include DIR_CLASSES . 'file.class.php';
 include DIR_CLASSES . 'utilities.class.php';
 include DIR_CLASSES . 'validate.class.php';
 include DIR_CLASSES . 'response.class.php';
+include DIR_CLASSES . 'mysql.class.php';
+
+include DIR_LIB . 'db_start.php';
 
